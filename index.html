@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generador AI de Páginas de Producto</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --app-primary-color: #2563eb; /* Valor por defecto Tailwind blue-600 */
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f5f9; 
+        border-radius: 3px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 3px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+    }
+    .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #cbd5e1 #f1f5f9;
+    }
+    .custom-scrollbar-thin::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    .custom-scrollbar-thin::-webkit-scrollbar-track {
+      background: transparent; 
+    }
+    .custom-scrollbar-thin::-webkit-scrollbar-thumb {
+      background: #94a3b8; 
+      border-radius: 2px;
+    }
+    .custom-scrollbar-thin::-webkit-scrollbar-thumb:hover {
+      background: #64748b; 
+    }
+    .custom-scrollbar-thin {
+      scrollbar-width: thin;
+      scrollbar-color: #94a3b8 transparent;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: 'var(--app-primary-color)', // Usar la variable CSS
+            success: '#10b981', // Verde éxito
+            neutral: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+              700: '#334155',
+              800: '#1e293b',
+              900: '#0f172a'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "@google/genai": "https://esm.sh/@google/genai@^1.5.1",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "@/components/icons": "./components/icons.tsx",
+    "@/components/SuperadminPanel": "./components/SuperadminPanel.tsx",
+    "@/utils": "./utils.ts",
+    "@/services/aiService": "./services/aiService.ts",
+    "../utils": "./utils.ts",
+    "./utils": "./utils.ts",
+    "./services/authService": "./services/authService.ts",
+    "./services/productService": "./services/productService.ts",
+    "./services/dataServiceKeys": "./services/dataServiceKeys.ts",
+    "./services/businessSettingsService": "./services/businessSettingsService.ts",
+    "./services/cartService": "./services/cartService.ts",
+    "./services/orderService": "./services/orderService.ts",
+    "./services/onboardingService": "./services/onboardingService.ts",
+    "./services/aiService": "./services/aiService.ts", 
+    "./services/adminAccountService": "./services/adminAccountService.ts",
+    "./services/subscriptionPlanService": "./services/subscriptionPlanService.ts",
+    "./services/aiProviderConfigService": "./services/aiProviderConfigService.ts",
+    "./services/adminMessagingService": "./services/adminMessagingService.ts",
+    "./services/backupService": "./services/backupService.ts",
+    "pg": "https://esm.sh/pg@^8.16.0",
+    "dotenv": "https://esm.sh/dotenv@^16.5.0",
+    "express": "https://esm.sh/express@^5.1.0",
+    "jsonwebtoken": "https://esm.sh/jsonwebtoken@^9.0.2",
+    "uuid": "https://esm.sh/uuid@^11.1.0",
+    "cors": "https://esm.sh/cors@^2.8.5",
+    "bcryptjs": "https://esm.sh/bcryptjs@^3.0.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-neutral-100">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
